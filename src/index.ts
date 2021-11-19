@@ -1,12 +1,14 @@
+import './fontawesone';
 import './styles.scss';
+import { icon1 } from './fontawesone';
+
 const API_KEY = 'dedb83e68e64484ba04011e773888fb9';
 
 const root: HTMLDivElement | null = document.querySelector('.root')
 const form: HTMLFormElement = document.createElement('form')
 
 form.innerHTML = `<input class='paralellogramm input' type="text" required placeholder="Ваш номер...">
-<button class='paralellogramm button' type='submit'>
-  <p class='content'>Заказать</p>
+<button class='paralellogramm button' type='submit'> <p class='content'> ${icon1} Заказать</p>
 </button>`
 if (root) {
   root.appendChild(form)

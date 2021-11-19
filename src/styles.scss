@@ -1,8 +1,10 @@
+// @import "~@fortawesome/fontawesome-svg-core/";
 * {
   box-sizing: border-box;
 }
 
 body {
+
   .root {
     background-image: (url(../public/image.jpg));
     min-height: 20vh;
@@ -51,13 +53,21 @@ body {
     background-color: red;
     margin: 0;
     width: 30%;
-  }
-  .content {
-    pointer-events: auto;
-    transform: skew(30deg);
-    margin: 0;
-    @media screen and (max-width: 479px) {
-      transform: skew(0deg);
+    .content {
+
+      pointer-events: auto;
+      transform: skew(30deg);
+      margin: 0;
+      display: flex;
+      justify-content: space-evenly;
+      svg{
+        width: 10%;
+      }
+      @media screen and (max-width: 479px) {
+        transform: skew(0deg);
+      }
     }
+
   }
+
 }
