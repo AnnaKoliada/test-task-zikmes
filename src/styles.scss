@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  .root {
+    background-image: (url(../public/image.jpg));
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    padding: 2rem;
+  }
+  form {
+    display: flex;
+    max-width: 700px;
+  }
+  .paralellogramm {
+    height: 30px;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.493);
+    transform-origin: 0 100%;
+    transform: skew(-30deg);
+    color: white;
+    border: 1px white solid;
+    @media screen and (max-width: 479px) {
+      transform-origin: 0 100%;
+      transform: skew(0deg);
+      color: white;
+      border: 1px white solid;
+    }
+  }
+  .input {
+    color: black;
+    font-style: normal;
+
+
+    @media screen and (max-width: 479px) {
+      transform: skew(0deg);
+    }
+    &::placeholder {
+      transform: skew(30deg);
+      padding: 0.5rem;
+      @media screen and (max-width: 479px) {
+        transform: skew(0deg);
+      }
+    }
+  }
+  .button {
+    background-color: red;
+    margin: 0;
+    width: 30%;
+  }
+  .content {
+    pointer-events: auto;
+    transform: skew(30deg);
+    margin: 0;
+    @media screen and (max-width: 479px) {
+      transform: skew(0deg);
+    }
+  }
+}
