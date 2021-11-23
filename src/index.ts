@@ -15,13 +15,10 @@ async function sendRequest(event: Event) {
   event.preventDefault();
   const input: HTMLInputElement | null = document.querySelector('.input');
 
-  const invocation = new XMLHttpRequest();
-  if (invocation) {
-    const response = await fetch(`https://newsapi.org/v2/everything?q=${input?.value}&apiKey=${API_KEY}`);
-    const result = await response.ok;
-    if (result) {
-      alert('Ваш запрос успешно отправлен');
-    } else alert('Ваш запрос не удалось отправить');
-  }
+  const response = await fetch(`https://newsapi.org/v2/everything?q=${input?.value}&apiKey=${API_KEY}`);
+  const result = await response.ok;
+  if (result) {
+    alert('Ваш запрос успешно отправлен');
+  } else alert('Ваш запрос не удалось отправить');
 }
 form.addEventListener('submit', (event: Event) => sendRequest(event));
